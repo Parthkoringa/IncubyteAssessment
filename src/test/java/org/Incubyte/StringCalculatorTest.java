@@ -31,4 +31,19 @@ public class StringCalculatorTest
     {
         assertEquals(10,StringCalculator.add("1\n2,7"));
     }
+
+    @Test
+    public void negativeNumbers_ShouldThrowException()
+    {
+        try
+        {
+            StringCalculator.add("-1,-3,4");
+            fail("Negative numbers not allowed");
+        }
+        catch(IllegalArgumentException e)
+        {
+            assertTrue(e.getMessage().contains("-1"));
+            assertTrue(e.getMessage().contains("-3"));
+        }
+    }
 }
