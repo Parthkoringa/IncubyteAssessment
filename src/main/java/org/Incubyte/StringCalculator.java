@@ -1,8 +1,6 @@
 package org.Incubyte;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StringCalculator
@@ -22,7 +20,8 @@ public class StringCalculator
             return 0;
         }
         List<Integer> numberList = new ArrayList<Integer>();
-        numberList = Arrays.stream(number.split(","))
+        ArrayList<String> delimiters = new ArrayList<String>(Arrays.asList(",", ";", "\n"));
+        numberList = Arrays.stream(number.split(delimiters.toString()))
                      .map(Integer::parseInt)
                      .collect(Collectors.toList());
 
