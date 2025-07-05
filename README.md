@@ -49,8 +49,12 @@ IncubyteAssessment/
 └── README.md
 ```
 
----
+### ✅ All Test Cases Passing
 
+Below is a screenshot showing all test cases successfully passing:
+
+![Test Results](screenshots/test-results.png)
+---
 
 
 ## 📜 Sample Inputs & Expected Outputs
