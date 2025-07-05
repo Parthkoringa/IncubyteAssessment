@@ -46,4 +46,22 @@ public class StringCalculatorTest
             assertTrue(e.getMessage().contains("-3"));
         }
     }
+
+    @Test
+    public void numbersWithCustomDelimiter_ShouldReturnSumOfTheNumbers()
+    {
+        assertEquals(6  ,StringCalculator.add("//;\n1;2;3"));
+    }
+
+    @Test
+    public void numbersGreaterThan1000_ShouldBeIgnored()
+    {
+        assertEquals(6,StringCalculator.add("1,2,3,1001"));
+    }
+
+    @Test
+    public void anyLengthCustomDelimiter_ShouldBeHandled()
+    {
+        assertEquals(6,StringCalculator.add("//[***]\n1***2***3"));
+    }
 }
