@@ -64,8 +64,8 @@ IncubyteAssessment/
 | `"//;\n1;2"`                    | `3`    | Custom single-char delimiter               |
 | `"//[***]\n1***2***3"`          | `6`    | Custom delimiter of any length             |
 | `"//[*][%]\n1*2%3"`             | `6`    | Multiple custom delimiters                 |
-| `"1,-2,3"`                      | Error  | Throws exception: Negative numbers not allowed: [-2] |
-| `"1,2,1001"`                    | `3`    | Numbers > 1000 are ignored (if implemented) |
+| `"1,-2,-3"`                      | Error  | Throws exception: Negative numbers not allowed: [-2, -3] |
+| `"1,2,1001"`                    | `3`    | Numbers > 1000 are ignored |
 
 
 ## 📬 Contact
